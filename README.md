@@ -1,3 +1,3 @@
 # solvro_ml
 zadanie rekrutacyjne
-pip install -r 
+pip install -r dependencies.txt
