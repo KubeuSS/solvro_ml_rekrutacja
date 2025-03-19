@@ -1,4 +1,4 @@
-# Projekt - Analiza danych z koktajlami
+# Analiza danych z koktajlami
 
 Projekt dotyczy analizy danych z koktajlami przy użyciu algorytmu klastrowania KMeans oraz innych technik analizy, takich jak PCA i Silhouette Score. Celem eksperymentów jest:
 
@@ -59,6 +59,6 @@ Notatnik ten pozwala na głębszą eksplorację danych, analizę wzorców i zale
 ## Przekształcenie danych
 
 Do przeprowadzenia klasteryzacji, dane zostały przekształcone w następujący sposób:
-   - Z kolumny `ingredients` wydobyto nazwy składników koktajli, a następnie dodano kolumny 0/1, które informują o obecności poszczególnych składników w koktajlu.
+   - Z kolumny **ingredients** wydobyto nazwy składników koktajli, a następnie dodano kolumny 0/1, które informują o obecności poszczególnych składników w koktajlu.
    - Usunięto dane kategoryczne, aby uprościć dane do formatu numerycznego.
    - Dla **tagów**: usunięto wiersze z brakującymi wartościami, a następnie wykonano identyczną operację jak w przypadku składników, tworząc kolumny 0/1.
