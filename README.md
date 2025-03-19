@@ -17,7 +17,7 @@ Aby uruchomić skrypty, upewnij się, że masz zainstalowanego Pythona i **pip**
 
 Zainstaluj wymagane biblioteki uruchamiając poniższe polecenie:
 
-'pip install -r dependencies.txt'
+- `pip install -r dependencies.txt`
 
 ## Dane wejściowe
 
@@ -29,7 +29,7 @@ Dane wejściowe znajdują się w pliku formatu JSON:
 
 1. Uruchom skrypt **preprocessing**. Ten skrypt przygotowuje dane do klastrowania i zapisuje je w pliku:
 
-   - `data/cluster_data.json`
+- `data/cluster_data.json`
 
 2. Skrypt wykonuje następujące operacje:
    - Wydobywa z kolumny `ingredients` nazwy poszczególnych składników koktajli.
@@ -45,8 +45,8 @@ Po uruchomieniu skryptu **preprocessing**, dane będą gotowe do klastrowania.
 2. Po uruchomieniu skryptu **clustering**:
    - Zobaczysz wykres prezentujący **metodę łokcia**, który pomoże Ci wybrać odpowiednią liczbę klastrów.
    - Następnie zostanie przeprowadzona klastrowanie danych.
-   - Zostanie wyświetlony wynik **Silhouette Score**, który oceni jakość klastracji.
-   - Na końcu pojawi się wykres ilustrujący klasteryzację.
+   - Zostanie wyświetlony wynik **Silhouette Score**, który oceni jakość klastrowania.
+   - Na końcu pojawi się wykres ilustrujący klastrowanie.
 
 ## Analiza eksploracyjna danych (EDA)
 
@@ -59,7 +59,7 @@ Notatnik ten pozwala na głębszą eksplorację danych, analizę wzorców i zale
 
 ## Przekształcenie danych
 
-Do przeprowadzenia klasteryzacji, dane zostały przekształcone w następujący sposób:
+Do przeprowadzenia klastrowania, dane zostały przekształcone w następujący sposób:
    - Z kolumny **ingredients** wydobyto nazwy składników koktajli, a następnie dodano kolumny 0/1, które informują o obecności poszczególnych składników w koktajlu.
    - Usunięto dane kategoryczne, aby uprościć dane do formatu numerycznego.
    - Dla **tagów**: usunięto wiersze z brakującymi wartościami, a następnie wykonano identyczną operację jak w przypadku składników, tworząc kolumny 0/1.
