@@ -2,10 +2,12 @@
 
 Projekt dotyczy analizy danych z koktajlami przy użyciu algorytmu klastrowania KMeans oraz innych technik analizy, takich jak PCA i Silhouette Score. Celem eksperymentów jest:
 
+- **Analiza eksploracyjna zbioru danych**.
+- **Przetwarzanie i przygotowanie danych do klastrowania**,
 - **Znalezienie optymalnej liczby klastrów**,
 - **Wyznaczenie klastrów**,
-- **Przetwarzanie i przygotowanie danych do klastrowania**,
-- **Analiza eksploracyjna zbioru danych**.
+
+
 
 ## Instrukcje instalacji
 
