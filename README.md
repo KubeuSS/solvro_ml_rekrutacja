@@ -11,14 +11,13 @@ Projekt dotyczy analizy danych z koktajlami przy użyciu algorytmu klastrowania 
 
 ## Instrukcje instalacji
 
-### Wymagania
-Aby uruchomić skrypty w Pythonie, upewnij się, że masz zainstalowanego Pythona w wersji 3.x oraz **pip**.
+Aby uruchomić skrypty, upewnij się, że masz zainstalowanego Pythona i **pip**.
 
-### Instalacja zależności
+### Instalacja bibliotek
 
 Zainstaluj wymagane biblioteki uruchamiając poniższe polecenie:
 
-pip install -r dependencies.txt
+'pip install -r dependencies.txt'
 
 ## Dane wejściowe
 
