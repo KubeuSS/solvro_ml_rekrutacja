@@ -10,11 +10,11 @@ df = pd.read_json("data/raw_data_cocktail.json")
 # ZAMIENIAM KOLUMNĘ SKŁADNIKÓW NA NAZWY UŻYWANYCH DO ZROBIENIA DANEGO KOKTAJLU
 df["ingredients"] = df["ingredients"].apply(lambda x: [ingredient['name'] for ingredient in x])
 
-# WYRZUCAM KOLUMNY KTÓRYCH NIE UŻYJĘ DO KLASTRYZACJI
+# WYRZUCAM KOLUMNY KTÓRYCH NIE UŻYJĘ DO KLASTROWANIA
 df = df.drop(
     columns=["id", "imageUrl", "createdAt", "updatedAt", "tags", "instructions", "alcoholic", "name", "category"])
 
-# ZAMIENIAM GLASS NA DANE NUMERYCZNE ABY UŻYĆ ICH DO KLASTERYZACJI
+# ZAMIENIAM GLASS NA DANE NUMERYCZNE ABY UŻYĆ ICH DO KLASTROWANIA
 label_encoder = LabelEncoder()
 df["glass_encoded"] = label_encoder.fit_transform(df["glass"])
 
@@ -22,8 +22,7 @@ df["glass_encoded"] = label_encoder.fit_transform(df["glass"])
 df.drop(columns=["glass"], inplace=True)
 
 
-# ZAMIENIAM KOLEJNĄ KOLUMNĘ NA DANE NUMERYCZNE ABY WYKORZYSTAĆ JA DO KLASTRYZACJI
-def ekstrakcja(kolumna):
+# ZAMIENIAM KOLEJNĄ KOLUMNĘ NA DANE NUMERYCZNE ABY WYKORZYSTAĆ JA DO KLASTROWANIA
     unique = []
     for list in kolumna.values:
         for ing in list:
@@ -39,5 +38,5 @@ for index, składnik in df["ingredients"].items():
 df = df.drop(columns="ingredients")
 df = pd.concat([df, składniki], axis=1)
 
-# NOWY PLIK JSON DO WYKORZYSTANIA PRZY KLASTRYZACJI
+# NOWY PLIK JSON DO WYKORZYSTANIA PRZY KLASTROWANIA
 df.to_json("data/cluster_data.json", indent=4)
