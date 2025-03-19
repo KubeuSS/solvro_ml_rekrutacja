@@ -1,4 +1,4 @@
-README - Instrukcja instalacji i powtórzenia eksperymentów
+README
 Projekt dotyczy analizy danych z koktajlami przy użyciu algorytmu klastrowania KMeans oraz innych technik analizy, takich jak PCA i Silhouette Score. Celem eksperymentów jest znalezienie optymalnej liczby klastrów, wyznaczenie ich a także przetwarzanie i przygotowanie danych do klastrowania oraz analiza eksploracyjna zbioru danych.
 
 W celu uruchomienia skryptów w python: 
