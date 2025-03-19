@@ -22,7 +22,7 @@ plt.grid(True, axis="x")
 plt.xticks(range(2, 20, 1))
 plt.show()
 
-# KLASTRACJA NA PODSTAWIE METODY ŁOKCIA
+# KLASTROWANIE NA PODSTAWIE METODY ŁOKCIA
 ilosc_klastow = 3
 kmeans = KMeans(n_clusters=ilosc_klastow, random_state=1, n_init=50)
 df["Klaster"] = kmeans.fit_predict(df)
@@ -31,7 +31,7 @@ df["Klaster"] = kmeans.fit_predict(df)
 liczebność_klastrów = df["Klaster"].value_counts()
 print(liczebność_klastrów)
 
-# PCA ABY ZWIZUALIZOWAĆ WYNIK KLASTRACJI
+# PCA ABY ZWIZUALIZOWAĆ WYNIK KLASTROWANIA
 pca = PCA(n_components=2)
 df_pca = pca.fit_transform(df.drop("Klaster", axis=1))
 
