@@ -1,15 +1,55 @@
-README
-Projekt dotyczy analizy danych z koktajlami przy użyciu algorytmu klastrowania KMeans oraz innych technik analizy, takich jak PCA i Silhouette Score. Celem eksperymentów jest znalezienie optymalnej liczby klastrów, wyznaczenie ich a także przetwarzanie i przygotowanie danych do klastrowania oraz analiza eksploracyjna zbioru danych.
+Projekt - Analiza danych z koktajlami
+Projekt dotyczy analizy danych z koktajlami przy użyciu algorytmu klastrowania KMeans oraz innych technik analizy, takich jak PCA i Silhouette Score. Celem eksperymentów jest:
 
-W celu uruchomienia skryptów w python: 
-instalujemy biblioteki -> pip install -r dependencies.txt
-dane znajdują się w pliku formatu JSON data/raw_data_cocktail.json
+Znalezienie optymalnej liczby klastrów,
+Wyznaczenie klastrów,
+Przetwarzanie i przygotowanie danych do klastrowania,
+Analiza eksploracyjna zbioru danych.
+Instrukcje instalacji
+Wymagania
+Aby uruchomić skrypty w Pythonie, upewnij się, że masz zainstalowanego Pythona w wersji 3.x oraz pip.
 
-Eksperyment rozpoczynamy od uruchomienia skryptu preprocesing, przygotowuje on dane do klastracji i zapisuje ten plik jako "data/cluster_data.json".
-Uruchamiając skrypt clustering zobaczymy wykres prezentujący metodę łokcia, która służy do wyboru liczby klastrów, po tym odbywa się klastracja,
-widzimy wynik Silhouette Score i wykres, które służą do oceny klastracji.
-Notatnik jupyter EDA, zawiera informacje o korelacjach pomiędzy składnikami, wykres częstości występowania danego składniki i korelację tagów.
-To oraz klastracja jest możliwa dzięki przekształceniu danych w następujący sposób: 
-wydobycie z kolumny indgredients nazw poszczególnych składników użytych do zrobienia danego koktajlu i dodanie kolumn 0/1 informujących o obecności składnika w koktajlu, 
-wyrzucenie danych kategorycznych ze zbioru,
-do wyznaczenie korelacji tagów usunięcie wierszy niepełnych, a następnie identyczna operacja jak "ingredients".
+Instalacja zależności
+Zainstaluj wymagane biblioteki uruchamiając poniższe polecenie:
+
+bash
+Kopiuj
+Edytuj
+pip install -r dependencies.txt
+Dane wejściowe znajdują się w pliku formatu JSON:
+
+data/raw_data_cocktail.json
+Przygotowanie danych
+Uruchom skrypt preprocessing. Ten skrypt przygotowuje dane do klastrowania i zapisuje je w pliku:
+
+data/cluster_data.json.
+Skrypt wykonuje następujące operacje:
+
+Wydobywa z kolumny ingredients nazwy poszczególnych składników koktajli.
+Dodaje kolumny 0/1 informujące o obecności składników w koktajlu.
+Usuwa dane kategoryczne z zestawu danych.
+Po uruchomieniu skryptu preprocessing, dane będą gotowe do klastrowania.
+
+Klastrowanie
+Uruchom skrypt clustering. Zawiera on metodę łokcia do wyboru optymalnej liczby klastrów oraz przeprowadza klastrowanie danych za pomocą algorytmu KMeans.
+
+Po uruchomieniu skryptu clustering:
+
+Zobaczysz wykres prezentujący metodę łokcia, który pomoże Ci wybrać odpowiednią liczbę klastrów.
+Następnie zostanie przeprowadzona klastracja danych.
+Zostanie wyświetlony wynik Silhouette Score, który oceni jakość klastracji.
+Na końcu pojawi się wykres ilustrujący klasteryzację.
+Analiza eksploracyjna danych (EDA)
+W projekcie znajduje się również notatnik Jupyter o nazwie EDA, który zawiera:
+
+Korelacje pomiędzy składnikami koktajli,
+Wykresy częstości występowania poszczególnych składników w danych,
+Analizę korelacji tagów.
+Notatnik ten pozwala na głębszą eksplorację danych, analizę wzorców i zależności pomiędzy składnikami.
+
+Przekształcenie danych
+Do przeprowadzenia klasteryzacji, dane zostały przekształcone w następujący sposób:
+
+Z kolumny ingredients wydobyto nazwy składników koktajli, a następnie dodano kolumny 0/1, które informują o obecności poszczególnych składników w koktajlu.
+Usunięto dane kategoryczne, aby uprościć dane do formatu numerycznego.
+Dla tagów: usunięto wiersze z brakującymi wartościami, a następnie wykonano identyczną operację jak w przypadku składników, tworząc kolumny 0/1.
