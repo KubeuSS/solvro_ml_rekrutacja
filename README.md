@@ -7,11 +7,15 @@ Mój projekt wykonuje klastrowanie oparte na nowym zbiorze danych, który jest w
 Aby uruchomić skrypty, zainstaluj Pythona i **pip**, następnie wymagane biblioteki uruchamiając poniższe polecenie w terminalu Pythona:
 - `pip install -r dependencies.txt`
 
+Aby zobaczyć notatniki jupytera w terminalu wpisz:
+- `pip install jupyterlab`
+- `jupyter lab`
+
 ## Dane wejściowe
 
 Dane wejściowe (pierwotna forma zbioru danych) znajduje się w pliku formatu JSON:
 
-- `data/raw_data_cocktail.json`
+- `raw_data_cocktail.json`
 
 ## Wnioski z eksploracji
 
@@ -21,7 +25,7 @@ Dane wymagały obróbki przed klastrowaniem ze względu na format kategoryczny, 
 
 1. Uruchom skrypt **preprocessing**. Ten skrypt przygotowuje dane do klastrowania i zapisuje je w pliku:
 
-- `data/cluster_data.json`
+- `cluster_data.json`
 
 2. Skrypt wykonuje następujące operacje:
    - Dodaje kolumny 0/1, które przechowują informacje o czynności wykonywanych w celu przygotowania danego koktajlu,
